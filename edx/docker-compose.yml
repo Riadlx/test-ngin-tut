@@ -1,0 +1,16 @@
+version: '3'
+services:
+  proxy:
+    build: ./
+    networks:
+      t2_proxy:
+    container_name: proxy
+    hostname: proxy
+    ports:
+      - 80:80
+
+networks:
+  t2_proxy:
+    external:
+      name: t2_proxy
+
